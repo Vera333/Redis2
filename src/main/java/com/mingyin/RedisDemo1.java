@@ -1,6 +1,7 @@
 package com.mingyin;
 
 import redis.clients.jedis.Jedis;
+import redis.clients.jedis.ZParams;
 
 import java.util.*;
 
@@ -88,4 +89,18 @@ public class RedisDemo1 {
             conn.sadd("group:" + group, article);
         }
     }
+    public List<Map<String,String>> getGroupArticles(Jedis conn, String group, int page) {
+        return getGroupArticles(conn, group, page, "score:");
+    }
+
+    public List<Map<String,String>> getGroupArticles(Jedis conn, String group, int page, String order) {
+        String key = order + group;
+        if (!conn.exists(key)) {
+            ZParams params = new ZParams().aggregate(ZParams.Aggregate.MAX);
+            conn.zinterstore(key, params, "group:" + group, order);
+            conn.expire(key, 60);
+        }
+        return getArticles(conn, page);
+    }
+
 }
