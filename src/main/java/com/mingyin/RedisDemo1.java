@@ -82,4 +82,10 @@ public class RedisDemo1 {
             }
         }
     }
+    public void addGroups(Jedis conn, String articleId, String[] toAdd) {
+        String article = "article:" + articleId;
+        for (String group : toAdd) {
+            conn.sadd("group:" + group, article);
+        }
+    }
 }

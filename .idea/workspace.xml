@@ -6,6 +6,7 @@
       <change beforePath="$PROJECT_DIR$/../feign-demo/serviceA/src/main/java/com/mingyin/serviceA/ServiceAController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../feign-demo/serviceA/src/main/java/com/mingyin/serviceA/ServiceAController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../feign-demo/serviceB/src/main/java/com/mingyin/serviceB/ServiceBController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../feign-demo/serviceB/src/main/java/com/mingyin/serviceB/ServiceBController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mingyin/RedisDemo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mingyin/RedisDemo1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../zuul-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../zuul-demo/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../zuul-demo/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../zuul-demo/src/main/resources/application.yml" afterDir="false" />
     </list>
@@ -21,8 +22,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mingyin/RedisDemo1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="107" column="29" lean-forward="true" selection-start-line="107" selection-start-column="29" selection-end-line="107" selection-end-column="29" />
+            <state relative-caret-position="257">
+              <caret line="88" column="9" lean-forward="true" selection-start-line="88" selection-start-column="9" selection-end-line="88" selection-end-column="9" />
+              <folding>
+                <element signature="e#201#202#0" expanded="true" />
+                <element signature="e#239#240#0" expanded="true" />
+                <element signature="e#1125#1140#0" expanded="true" />
+                <element signature="e#2132#2152#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -49,8 +56,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="553" />
-    <option name="width" value="787" />
+    <option name="x" value="-23" />
+    <option name="y" value="14" />
+    <option name="width" value="1072" />
     <option name="height" value="745" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -103,8 +111,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572939157207" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572940410608" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../demo" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -151,12 +159,12 @@
       <option name="presentableId" value="Default" />
       <updated>1572836355347</updated>
       <workItem from="1572836364287" duration="1410000" />
-      <workItem from="1572931701260" duration="7085000" />
+      <workItem from="1572931701260" duration="8285000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8495000" />
+    <option name="totallyTimeSpent" value="9695000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -178,10 +186,10 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.3289689" />
+      <window_info anchor="bottom" id="Messages" weight="0.32741934" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32419354" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32419354" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -189,7 +197,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32903227" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32903227" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -245,8 +253,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mingyin/RedisDemo1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="107" column="29" lean-forward="true" selection-start-line="107" selection-start-column="29" selection-end-line="107" selection-end-column="29" />
+        <state relative-caret-position="257">
+          <caret line="88" column="9" lean-forward="true" selection-start-line="88" selection-start-column="9" selection-end-line="88" selection-end-column="9" />
+          <folding>
+            <element signature="e#201#202#0" expanded="true" />
+            <element signature="e#239#240#0" expanded="true" />
+            <element signature="e#1125#1140#0" expanded="true" />
+            <element signature="e#2132#2152#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
