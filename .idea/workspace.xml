@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/../feign-demo/service-a-api/src/main/java/com/mingyin/api/ServiceAInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/../feign-demo/service-a-api/src/main/java/com/mingyin/api/ServiceAInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../feign-demo/serviceA/src/main/java/com/mingyin/serviceA/ServiceAController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../feign-demo/serviceA/src/main/java/com/mingyin/serviceA/ServiceAController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../feign-demo/serviceB/src/main/java/com/mingyin/serviceB/ServiceBController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../feign-demo/serviceB/src/main/java/com/mingyin/serviceB/ServiceBController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../zuul-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../zuul-demo/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../zuul-demo/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../zuul-demo/src/main/resources/application.yml" afterDir="false" />
     </list>
@@ -20,8 +21,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mingyin/RedisDemo1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="98" column="9" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
+            <state relative-caret-position="195">
+              <caret line="107" column="29" lean-forward="true" selection-start-line="107" selection-start-column="29" selection-end-line="107" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -102,7 +103,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572938647784" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572939157207" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -150,12 +151,12 @@
       <option name="presentableId" value="Default" />
       <updated>1572836355347</updated>
       <workItem from="1572836364287" duration="1410000" />
-      <workItem from="1572931701260" duration="6476000" />
+      <workItem from="1572931701260" duration="7085000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7886000" />
+    <option name="totallyTimeSpent" value="8495000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -244,8 +245,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mingyin/RedisDemo1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="98" column="9" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
+        <state relative-caret-position="195">
+          <caret line="107" column="29" lean-forward="true" selection-start-line="107" selection-start-column="29" selection-end-line="107" selection-end-column="29" />
         </state>
       </provider>
     </entry>

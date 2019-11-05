@@ -1,14 +1,11 @@
 package com.mingyin;
 
 import redis.clients.jedis.Jedis;
-import redis.clients.jedis.ZParams;
 
 import java.util.*;
 
 public class RedisDemo1 {
 
-    private static final int ONE_WEEK_IN_SECONDS = 7 * 86400;
-    private static final int VOTE_SCORE = 432;
     private static final int ARTICLES_PER_PAGE = 5;
 
     public static void main(String[] args) {
@@ -19,12 +16,12 @@ public class RedisDemo1 {
         Jedis conn = new Jedis("localhost");
         conn.select(10);
 
-//        String articleId = postArticle(
-//                conn, "username2", "A title2", "http://www.google.com");
-//        System.out.println("We posted a new article with id: " + articleId);
+        String articleId = postArticle(
+                conn, "username6", "A title6", "http://www.google.com");
+        System.out.println("We posted a new article with id: " + articleId);
 
-//        String articleId = "1";
-//        articleVote(conn, "other_user", "article:" + articleId);
+//        String articleId = "6";
+//        articleVote(conn, "other_user1", "article:" + articleId);
 
         List<Map<String,String>> articles = getArticles(conn, 1);
         printArticles(articles);
@@ -35,7 +32,6 @@ public class RedisDemo1 {
 
         String voted = "voted:" + articleId;
         conn.sadd(voted, user);
-        conn.expire(voted, ONE_WEEK_IN_SECONDS);
 
         long now = System.currentTimeMillis() / 1000;
         String article = "article:" + articleId;
@@ -47,29 +43,24 @@ public class RedisDemo1 {
         articleData.put("votes", "1");
         conn.hmset(article, articleData);
         conn.zadd("time:", now, article);
+        conn.zadd("score:", now + 432, article);
 
         return articleId;
     }
 
     public void articleVote(Jedis conn, String user, String article) {
-        long cutoff = (System.currentTimeMillis() / 1000) - ONE_WEEK_IN_SECONDS;
-        if (conn.zscore("time:", article) < cutoff){
-            return;
-        }
-
         String articleId = article.substring(article.indexOf(':') + 1);
         if (conn.sadd("voted:" + articleId, user) == 1) {
-
-            conn.zincrby("score:", VOTE_SCORE, article);
+            conn.zincrby("score:", 432, article);
             conn.hincrBy(article, "votes", 1);
         }
     }
 
-
     public List<Map<String,String>> getArticles(Jedis conn, int page) {
         int start = (page - 1) * ARTICLES_PER_PAGE;
         int end = start + ARTICLES_PER_PAGE - 1;
-        Set<String> ids = conn.zrevrange("time:", start, end);
+
+        Set<String> ids = conn.zrevrange("score:", start, end);
         List<Map<String,String>> articles = new ArrayList<Map<String,String>>();
         for (String id : ids){
             Map<String,String> articleData = conn.hgetAll(id);
@@ -78,26 +69,6 @@ public class RedisDemo1 {
         }
 
         return articles;
-    }
-    public void addGroups(Jedis conn, String articleId, String[] toAdd) {
-        String article = "article:" + articleId;
-        for (String group : toAdd) {
-            conn.sadd("group:" + group, article);
-        }
-    }
-
-    public List<Map<String,String>> getGroupArticles(Jedis conn, String group, int page) {
-        return getGroupArticles(conn, group, page, "score:");
-    }
-
-    public List<Map<String,String>> getGroupArticles(Jedis conn, String group, int page, String order) {
-        String key = order + group;
-        if (!conn.exists(key)) {
-            ZParams params = new ZParams().aggregate(ZParams.Aggregate.MAX);
-            conn.zinterstore(key, params, "group:" + group, order);
-            conn.expire(key, 60);
-        }
-        return getArticles(conn, page);
     }
 
     private void printArticles(List<Map<String,String>> articles){
